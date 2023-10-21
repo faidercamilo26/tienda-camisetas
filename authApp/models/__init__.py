@@ -1,4 +1,4 @@
-from .persona import Persona
+from .user import User
 from .tipoPersona import TipoPersona
 from .camiseta import Camiseta
 from .camisetaColor import CamisetaColor

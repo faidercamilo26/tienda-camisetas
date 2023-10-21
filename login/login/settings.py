@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
