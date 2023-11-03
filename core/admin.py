@@ -1,7 +1,5 @@
 from django.contrib import admin
-
-#Register your models here.
-from .models.user import User
+from .models import user
 from .models.tipoPersona import TipoPersona
 from .models.camiseta import Camiseta
 from .models.camisetaColor import CamisetaColor
@@ -10,12 +8,21 @@ from .models.color import Color
 from .models.detalleFactura import DetalleFactura
 from .models.estampado import Estampado
 from .models.factura import Factura
-
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 class UserAdmin(admin.ModelAdmin):
     list_per_page = 20
-    list_display = ('nombre','apellido','numero_documento','tipo_documento','correo', 'numeroCelular')
-    search_fields = ['nombre','apellido','numero_documento']
+    list_display = (
+            'username', 'nombre', 'apellido', 'tipo_documento', 'numero_documento','tipo_persona', 
+            'id','email', 'numeroCelular', 'direccion',)
+    list_display_links = (
+            'username', 'nombre', 'apellido', 'tipo_documento', 'numero_documento', 'tipo_persona', 
+            'id','email', 'numeroCelular', 'direccion',)
+    search_fields = (
+            'username', 'nombre', 'apellido', 'tipo_documento', 'numero_documento', 'tipo_persona', 
+            'id','email', 'numeroCelular', 'direccion',)
+    list_per_page = 25
     list_filter = ('nombre',)
     
     
