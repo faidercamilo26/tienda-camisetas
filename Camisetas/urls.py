@@ -5,6 +5,9 @@ from core.views.tipoPersonaView import TipoListCreateView
 from django.views.generic import TemplateView
 from django.conf.urls.static import static
 from django.conf import settings
+from Camisetas.views import Inicio
+from Camisetas.views import Login
+from Camisetas.views import Registro
 
 
 urlpatterns = [
@@ -15,4 +18,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('user/', UserListCreateView.as_view()),
     path('tipoPersona/', TipoListCreateView.as_view() ),
+    path('Inicio/', Inicio),
+    path('Login/', Login),
+    path('Registro/', Registro),
 ]
