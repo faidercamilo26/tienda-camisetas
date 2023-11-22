@@ -24,7 +24,7 @@ ALLOWED_HOSTS = ['*']
 
 
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'django.contrib.admin',
@@ -33,15 +33,39 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    
+    
+    
+]
+
+PROJECT_APPS = []
+ECOMMERCE_APSS = [
+    'apps.category',
     'core',
+    ]
+THIRD_PARTY_APPS = [
     'corsheaders',
     'rest_framework',
     'djoser',
     'social_django',
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
+INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + ECOMMERCE_APSS + THIRD_PARTY_APPS
+
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'autoParagraph': False
+    }
+}
+
+CKEDITOR_UPLOAD_PATH = "/media/"
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'  
@@ -64,7 +88,7 @@ ROOT_URLCONF = 'Camisetas.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -134,16 +158,21 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
 
 
 
-STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'build/static')
+]
 
 
 

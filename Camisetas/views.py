@@ -3,7 +3,7 @@ import datetime
 from django.template import Template, Context
 
 def Inicio (request):
-    plantillaExterna = open("C:/tienda-camisetas-master (1)/tienda-camisetas-master/Plantillas/Inicio.html")
+    plantillaExterna = open("E:\Django\Camisetas\Plantillas\Inicio.html")
     template = Template (plantillaExterna.read())
     plantillaExterna.close()
     contexto = Context()
@@ -11,7 +11,7 @@ def Inicio (request):
     return HttpResponse(documento)
 
 def Login (request):
-    plantillaExterna1 = open("C:/tienda-camisetas-master (1)/tienda-camisetas-master/Plantillas/Login.html")
+    plantillaExterna1 = open("E:\Django\Camisetas\Plantillas\Login.html")
     template1 = Template (plantillaExterna1.read())
     plantillaExterna1.close()
     contexto1 = Context()
@@ -19,7 +19,7 @@ def Login (request):
     return HttpResponse(documento1)
 
 def Registro (request):
-    plantillaExterna2 = open("C:/tienda-camisetas-master (1)/tienda-camisetas-master/Plantillas/Registro.html")
+    plantillaExterna2 = open("E:\Django\Camisetas\Plantillas\Registro.html")
     template2 = Template (plantillaExterna2.read())
     plantillaExterna2.close()
     contexto2 = Context()

@@ -24,7 +24,7 @@ class UserAccountManager(BaseUserManager):
 class User(AbstractBaseUser,PermissionsMixin):
     id = models.AutoField(primary_key=True )
     username = models.CharField('Username',max_length=20, unique=True)
-    tipo_documento = models.CharField(max_length=64, choices = (('CC', 'Cedula de ciudadania'), ('CE','Cedula de extranjeria'),('TI', 'Tarjeta d identidad') ))
+    tipo_documento = models.CharField(max_length=64, choices = (('CC', 'Cedula de ciudadania'), ('CE','Cedula de extranjeria'),('TI', 'Tarjeta de identidad') ))
     numero_documento = models.IntegerField(null = True, blank = True)
     tipo_persona = models.ForeignKey(TipoPersona, on_delete= models.CASCADE , related_name='tipoPersona', null = True, blank = True)
     nombre = models.CharField('Nombre', max_length=20)

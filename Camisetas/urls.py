@@ -18,7 +18,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('user/', UserListCreateView.as_view()),
     path('tipoPersona/', TipoListCreateView.as_view() ),
-    path('Inicio/', Inicio),
-    path('Login/', Login),
-    path('Registro/', Registro),
-]
+    path('api/category/', include ('apps.category.urls') ),
+    path('inicio/', Inicio),
+    path('login/', Login),
+    path('registro/', Registro),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += [re_path(r'^.*',
+                        TemplateView.as_view(template_name='index.html'))]
