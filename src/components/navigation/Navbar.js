@@ -1,7 +1,9 @@
-import { Fragment } from 'react'
+import { Fragment, useState, useEffect  } from 'react'
 import { Popover, Transition, Menu } from '@headlessui/react'
 import { NavLink, Link } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 import Alert from '../../components/alert'
+import { logout } from '../../redux/actions/auth'
 import { connect } from 'react-redux'
 import {
   BookmarkAltIcon,
@@ -89,7 +91,19 @@ function classNames(...classes) {
 function Navbar({
   isAuthenticated,
   user,
+  logout,
 }) {
+
+  const [redirect, setRedirect] = useState(false);
+
+  const logouthandler = () => {
+      logout()
+      setRedirect(true);
+
+  }
+
+  if(redirect)
+    return <Navigate to='/' />;
 
   const authLinks = (
     <Menu as="div" className="relative inline-block text-left">
@@ -116,15 +130,15 @@ function Navbar({
           <div className="py-1">
             <Menu.Item>
               {({ active }) => (
-                <Link
-                  to="/dashboard"
+                <button
+                onClick={logouthandler}
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
+                    'block w-full text-left px-4 py-2 text-sm'
                   )}
                 >
-                  Dashboard
-                </Link>
+                  Cerrar sesión
+                </button>
               )}
             </Menu.Item>
           </div>
@@ -246,9 +260,9 @@ function Navbar({
                   </>
                 )}
               </Popover>
-              <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                Store
-              </a>
+              <Link to="/shop" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                Shop
+              </Link>
               <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
                 Docs
               </a>
@@ -475,5 +489,5 @@ const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps,{
-
+  logout
 }) (Navbar)

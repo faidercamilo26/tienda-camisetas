@@ -19,6 +19,12 @@ export const AUTHENTICATED_FAIL = 'AUTHENTICATED_FAIL';
 export const REFRESH_SUCCESS = 'REFRESH_SUCCESS';
 export const REFRESH_FAIL = 'REFRESH_FAIL';
 
+export const LOGOUT = 'LOGOUT';
+
 // Alerts
 export const SET_ALERT = 'SET_ALERT';
 export const REMOVE_ALERT = 'REMOVE_ALERT';
+
+// Categories
+export const GET_CATEGORIES_SUCCESS = 'GET_CATEGORIES_SUCCESS';
+export const GET_CATEGORIES_FAIL = 'GET_CATEGORIES_FAIL';

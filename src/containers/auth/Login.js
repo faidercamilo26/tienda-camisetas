@@ -44,7 +44,7 @@ function Login({
               src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
               alt="Workflow"
             />
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Registrarte</h2>
+            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Iniciar sesión</h2>
           </div>
   
           <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">

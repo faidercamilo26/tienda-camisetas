@@ -13,6 +13,7 @@ import {
     AUTHENTICATED_FAIL,
     REFRESH_SUCCESS,
     REFRESH_FAIL,
+    LOGOUT,
 } from './types'
 
 import axios from 'axios'
@@ -119,7 +120,7 @@ async dispatch => {
                 type: SIGNUP_SUCCESS,
                 payload: res.data
             })
-            dispatch(setAlert('Te enviamos un correo, por favor activa tu cuenta. Revisa tu correo', 'green'))
+            dispatch(setAlert('Te enviamos un correo, por favor activa tu cuenta.', 'green'))
         }else{
             dispatch({
                 type: SIGNUP_FAIL
@@ -312,4 +313,11 @@ export const refresh = () => async dispatch => {
             type: REFRESH_FAIL
         });
     }
+}
+
+export const logout = () => dispatch => {
+    dispatch({
+        type: LOGOUT
+    })
+    dispatch(setAlert('sesion cerrada correctamente', 'green'));
 }

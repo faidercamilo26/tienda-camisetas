@@ -6,6 +6,7 @@ import Footer from '../components/navigation/Footer';
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 
+
 const Layout = (props) => {
 
     useEffect(() => {
