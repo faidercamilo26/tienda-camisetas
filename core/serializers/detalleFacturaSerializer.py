@@ -4,5 +4,5 @@ from core.models.detalleFactura import DetalleFactura
 class DetalleFacturaSerializer(serializers.ModelSerializer):
     class Meta:
         models = DetalleFactura
-        fields = ['idConsecutivo','camisetaColor','estampado','valorCamiseta', 'valorEstampado','valorEstampar']
+        fields = ['idConsecutivo','camisetaColor','valorCamiseta''valorEstampar']
         
