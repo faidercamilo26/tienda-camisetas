@@ -3,10 +3,10 @@ from .models import user
 from .models.tipoPersona import TipoPersona
 from .models.camiseta import Camiseta
 from .models.camisetaColor import CamisetaColor
-from .models.catalogo import Catalogo
+#from .models.catalogo import Catalogo
 from .models.color import Color
 from .models.detalleFactura import DetalleFactura
-from .models.estampado import Estampado
+#from .models.estampado import Estampado
 from .models.factura import Factura
 from django.contrib.auth import get_user_model
 User = get_user_model()
@@ -30,10 +30,10 @@ admin.site.register(User, UserAdmin)
 admin.site.register(TipoPersona)
 admin.site.register(Camiseta)
 admin.site.register(CamisetaColor)
-admin.site.register(Catalogo)
+#admin.site.register(Catalogo)
 admin.site.register(Color)
 admin.site.register(DetalleFactura)
-admin.site.register(Estampado)
+#admin.site.register(Estampado)
 admin.site.register(Factura)
 
 

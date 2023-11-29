@@ -41,7 +41,6 @@ PROJECT_APPS = []
 ECOMMERCE_APSS = [
     'apps.category',
     'core',
-    'apps.cart'
     ]
 THIRD_PARTY_APPS = [
     'corsheaders',

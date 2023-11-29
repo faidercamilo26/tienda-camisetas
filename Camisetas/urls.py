@@ -22,6 +22,8 @@ urlpatterns = [
     path('inicio/', Inicio),
     path('login/', Login),
     path('registro/', Registro),
+    path('api/estampado/', include ('apps.estampado.urls') ),
+    
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += [re_path(r'^.*',

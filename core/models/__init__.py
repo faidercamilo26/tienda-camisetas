@@ -2,8 +2,8 @@ from .camisetaColor import CamisetaColor
 from .user import User
 from .tipoPersona import TipoPersona
 from .camiseta import Camiseta
-from .catalogo import Catalogo
+#from .catalogo import Catalogo
 from .color import Color
 from .detalleFactura import DetalleFactura
-from .estampado import Estampado
+#from .estampado import Estampado
 from .factura import Factura

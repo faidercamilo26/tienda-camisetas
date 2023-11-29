@@ -149,8 +149,8 @@ function Signup({
                         required
                         >
                         <option value="" disabled selected>Tipo de persona</option>
-                        <option value="1">Artista</option>
-                        <option value="2">Cliente</option>
+                        <option value="2">Artista</option>
+                        <option value="1">Cliente</option>
                         </select>
                     </div>
                 </div>
