@@ -3,7 +3,8 @@ from datetime import datetime
 from core.models.user import User
 from apps.category.models import Category 
 
-
+from django.conf import settings
+domain = settings.DOMAIN
 
 class Estampado(models.Model):
     artista = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -16,6 +17,10 @@ class Estampado(models.Model):
     ventas = models.IntegerField(default=0) 
     fecha_creacion = models.DateTimeField(default=datetime.now)
     
+    def get_thumbnail(self):
+        if self.foto:
+            return self.foto.url
+        return ''
     
     def __str__(self):
         return self.nombre

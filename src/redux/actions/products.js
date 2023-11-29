@@ -79,7 +79,7 @@ export const get_products_by_sold = () => async dispatch => {
     };
 
     try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/estampado/get-estampados?sortBy=vendido&order=desc&limit=3`, config);
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/estampado/get-estampados?sortBy=ventas&order=desc&limit=3`, config);
 
         if (res.status === 200) {
             dispatch({
