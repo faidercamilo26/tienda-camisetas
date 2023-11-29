@@ -41,7 +41,10 @@ PROJECT_APPS = []
 ECOMMERCE_APSS = [
     'apps.category',
     'core',
+<<<<<<< HEAD
     'apps.cart'
+=======
+>>>>>>> parent of 0de26caa (funcionalidad de de las estampas)
     ]
 THIRD_PARTY_APPS = [
     'corsheaders',
