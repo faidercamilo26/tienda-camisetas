@@ -1,5 +1,5 @@
 from django.db import models
-from apps.product.models import Product
+#from apps.product.models import Product
 from django.contrib.auth import get_user_model
 
 user = get_user_model()
