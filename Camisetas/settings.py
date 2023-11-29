@@ -42,9 +42,12 @@ ECOMMERCE_APSS = [
     'apps.category',
     'core',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'apps.cart'
 =======
 >>>>>>> parent of 0de26caa (funcionalidad de de las estampas)
+=======
+>>>>>>> c5c63787df16ce23dd90a94bcd18075a8ba06e81
     ]
 THIRD_PARTY_APPS = [
     'corsheaders',
