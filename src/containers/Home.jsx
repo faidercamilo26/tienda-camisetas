@@ -22,7 +22,6 @@ const Home = ({
     return(
         <Layout>
             <div className="text-blue-500">
-                <Banner/>
                 <ProductsArrival data={products_arrival}/>
                 <ProductsSold data={products_sold}/>
 
